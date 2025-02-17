@@ -16,10 +16,10 @@ function HeroSection() {
 
         {/* Buttons */}
         <div className="flex gap-6 mt-5 justify-center md:justify-start">
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg hover:bg-blue-700 hover:scale-105 transition-all duration-300">
+          <button className="bg-blue-600 text-white px-6 py-3 rounded-full text-base font-semibold shadow-lg hover:bg-blue-700 hover:scale-105 transition-all duration-300">
             Hire Me
           </button>
-          <button className="border-2 border-blue-600 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold shadow-lg hover:bg-blue-600 hover:text-white hover:scale-105 transition-all duration-300">
+          <button className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-full text-base font-semibold shadow-lg hover:bg-blue-600 hover:text-white hover:scale-105 transition-all duration-300">
             View Work
           </button>
         </div>
