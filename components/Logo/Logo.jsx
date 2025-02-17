@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Logo() {
+function Logo({navOpen}) {
   return (
     <a href="#home">
-        <div>Logo</div>
+        <div className={`${navOpen ? "text-gray-700" :"text-white"} sm:text-gray-700`}>Logo</div>
     </a>
   )
 }

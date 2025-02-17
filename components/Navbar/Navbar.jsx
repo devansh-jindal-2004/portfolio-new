@@ -18,13 +18,13 @@ function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white shadow-lg py-3" : "bg-transparent shadow-none py-4"
+        scrolled || navOpen ? "bg-white shadow-lg py-3" : "bg-transparent shadow-none py-4"
       }`}
     >
       <div className="container mx-auto flex justify-between items-center px-6 lg:px-10">
         {/* Logo */}
         <div className="text-2xl font-bold">
-          <Logo />
+          <Logo navOpen={navOpen} />
         </div>
 
         {/* Desktop Menu */}
@@ -33,7 +33,7 @@ function Navbar() {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="relative group font-medium transition-all duration-300 text-gray-700 hover:text-blue-600"
+              className={`relative group font-medium transition-all duration-300 text-gray-700 hover:text-blue-600`}
             >
               {item}
               <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
@@ -57,7 +57,7 @@ function Navbar() {
           className="md:hidden text-2xl focus:outline-none"
           onClick={() => setNavOpen(!navOpen)}
         >
-          {navOpen ? <FaTimes /> : <FaBars />}
+          {navOpen ? <FaTimes /> : <FaBars className="text-white sm:text-gray-700" />}
         </button>
       </div>
 
