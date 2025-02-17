@@ -4,7 +4,7 @@ import heroImage from "@/public/heroImage.png";
 
 function HeroSection() {
   return (
-    <section className="flex flex-col md:flex-row flex-wrap justify-between items-center px-10 md:px-20 lg:px-24 pt-40 bg-gradient-to-b from-[#f5f5f5] to-[#e0e0e0] min-h-screen">
+    <section className="flex flex-col md:flex-row flex-wrap justify-between items-center px-10 md:px-20 lg:px-24 pt-40 pb-20 bg-gradient-to-b from-[#f5f5f5] to-[#e0e0e0]">
       {/* Left Content */}
       <div className="text-center md:text-left w-full md:w-1/2">
         <h1 className="text-3xl md:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
@@ -16,10 +16,10 @@ function HeroSection() {
 
         {/* Buttons */}
         <div className="flex gap-6 mt-5 justify-center md:justify-start">
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg hover:bg-blue-700 hover:scale-105 transition-all duration-300">
+          <button className="bg-blue-600 text-white px-6 py-3 rounded-full text-base font-semibold shadow-lg hover:bg-blue-700 hover:scale-105 transition-all duration-300">
             Hire Me
           </button>
-          <button className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-full text-sm font-semibold shadow-lg hover:bg-blue-600 hover:text-white hover:scale-105 transition-all duration-300">
+          <button className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-full text-base font-semibold shadow-lg hover:bg-blue-600 hover:text-white hover:scale-105 transition-all duration-300">
             View Work
           </button>
         </div>
