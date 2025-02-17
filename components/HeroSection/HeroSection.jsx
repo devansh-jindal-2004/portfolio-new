@@ -7,7 +7,7 @@ function HeroSection() {
     <section className="flex flex-col md:flex-row flex-wrap justify-between items-center px-10 md:px-20 lg:px-24 pt-40 bg-gradient-to-b from-[#f5f5f5] to-[#e0e0e0] min-h-screen">
       {/* Left Content */}
       <div className="text-center md:text-left w-full md:w-1/2">
-        <h1 className="text-2xl md:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
+        <h1 className="text-3xl md:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
           Full-Stack Developer & Mobile App Expert
         </h1>
         <p className="text-sm md:text-xl xl:text-2xl text-gray-700 mt-3 leading-relaxed">
