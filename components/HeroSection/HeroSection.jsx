@@ -28,7 +28,7 @@ function HeroSection() {
             }}
         >
             {/* Overlay for better text visibility */}
-            <div className="absolute inset-0 bg-black/40 sm:hidden"></div>
+            <div className="absolute inset-0 bg-black/70 sm:hidden"></div>
 
             {/* Left Content */}
             <div className="relative text-center sm:text-left w-full sm:w-1/2 z-10 text-white sm:text-gray-900">
@@ -41,10 +41,10 @@ function HeroSection() {
 
                 {/* Buttons */}
                 <div className="flex gap-6 mt-5 justify-center sm:justify-start">
-                    <button className="bg-blue-600 text-white px-6 py-3 rounded-full text-base xl:text-xl font-semibold shadow-lg hover:bg-transparent hover:border-2 sm:hover:text-blue-600 border-white sm:border-blue-600 hover:scale-102 transition-all duration-300">
+                    <button className="bg-blue-600 text-white px-6 py-3 rounded-full text-base xl:text-xl font-semibold shadow-lg hover:bg-transparent hover:border-2 sm:hover:text-blue-600 border-white sm:border-blue-600 transition-all duration-300">
                         Hire Me
                     </button>
-                    <button className="border-2 border-blue-600 text-white sm:text-blue-600 px-6 py-3 rounded-full text-base xl:text-xl font-semibold shadow-lg hover:bg-blue-600 hover:text-white hover:scale-105 transition-all duration-300">
+                    <button className="border-2 border-blue-600 text-white sm:text-blue-600 px-6 py-3 rounded-full text-base xl:text-xl font-semibold shadow-lg hover:bg-blue-600 hover:text-white transition-all duration-300">
                         View Work
                     </button>
                 </div>
