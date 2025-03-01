@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-function Logo({navOpen}) {
+function Logo({ navOpen }) {
   return (
     <a href="#home">
-        <div className={`${navOpen ? "text-gray-700" :"text-white"} sm:text-gray-700`}>Logo</div>
+      <div className={`${navOpen ? "text-gray-300" : "text-white"} sm:text-white font-bold text-2xl`}>
+        Logo
+      </div>
     </a>
-  )
+  );
 }
 
-export default Logo
+export default Logo;
