@@ -10,7 +10,7 @@ function SideBar() {
     const [isvisible, setisvisible] = useState(false);
 
     return (
-        <div className="bg-[#1E1E1E] relative text-white p-8 flex flex-col justify-center items-center rounded-xl border border-gray-100/10 shadow-md">
+        <div className="bg-[#1E1E1E] relative text-white md:p-8 flex flex-col justify-center items-center rounded-xl border border-gray-100/10 shadow-md">
 
             {/* Toggle Button */}
             <button 
@@ -61,9 +61,9 @@ function SideBar() {
                 </div>
             </div>
 
-            <div className="border-t border-gray-200/10 w-full my-4"></div>
 
             <div className={`w-full ${isvisible ? "block" : "hidden"} xl:block`}>
+            <div className="border-t border-gray-200/10 w-full my-4"></div>
 
             {/* Contact Information */}
             <div className="w-full space-y-4 grid grid-cols-2 xl:grid-cols-1 gap-4">
