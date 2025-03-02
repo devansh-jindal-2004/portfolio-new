@@ -98,7 +98,7 @@ function SideBar() {
                         href={href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`flex items-center justify-center text-[#FCE469] hover:scale-110 scale-90 ${hover}`}
+                        className={`flex items-center justify-center text-gray-400 hover:scale-110 scale-90 ${hover}`}
                     >
                         <Icon className="text-2xl" />
                     </a>
