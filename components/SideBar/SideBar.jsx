@@ -10,11 +10,10 @@ function SideBar() {
     const [isvisible, setisvisible] = useState(false);
 
     return (
-        <div className="bg-[#1E1E1E] relative text-white md:p-8 flex flex-col justify-center items-center rounded-xl border border-gray-100/10 shadow-md">
+        <div className="bg-[#1E1E1E] relative text-white p-4 sm:p-5 flex flex-col justify-center items-center rounded-xl border border-gray-100/10 shadow-md" onClick={() => setisvisible(!isvisible)} >
 
             {/* Toggle Button */}
             <button 
-                onClick={() => setisvisible(!isvisible)} 
                 className={`absolute top-0 right-0 px-4 py-2 bg-[#272727] rounded-tr-xl rounded-bl-xl shadow-md hover:bg-gray-700 transition xl:hidden ${isvisible && "text-[#FCE469] bg-gradient-to-br from-[rgba(252,228,105,0.6)] to-[#272727] "} `}
             >
                 {isvisible ? <FaChevronUp className="text-white" /> : <FaChevronDown className="text-white" />}
@@ -66,19 +65,19 @@ function SideBar() {
             <div className="border-t border-gray-200/10 w-full my-4"></div>
 
             {/* Contact Information */}
-            <div className="w-full space-y-4 grid grid-cols-2 xl:grid-cols-1 gap-4">
+            <div className="w-full space-y-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-x-6 gap-y-6">
                 {[
                     { icon: CiMail, label: "EMAIL", value: "devanshjindal31@gmail.com" },
                     { icon: CiPhone, label: "PHONE", value: "+91 88473 04008" },
                     { icon: CiLocationOn, label: "LOCATION", value: "Bathinda, Punjab" },
                 ].map(({ icon: Icon, label, value }, idx) => (
-                    <div key={idx} className="flex items-center gap-4">
-                        <div className="bg-[#272727] w-12 h-12 rounded-lg flex items-center justify-center shadow-[-3px_-3px_6px_rgba(255,255,255,0.2)] p-3">
-                            <Icon className="text-[#FCE469] text-2xl stroke-[1.5]" />
+                    <div key={idx} className="flex items-center gap-4 w-full flex-wrap">
+                        <div className="bg-[#272727] sm:w-12 sm:h-12 rounded-lg flex items-center justify-center shadow-[-3px_-3px_6px_rgba(255,255,255,0.2)] p-3">
+                            <Icon className="text-[#FCE469] text-lg md:text-2xl stroke-[1.5]" />
                         </div>
                         <div className="text-white text-sm">
-                            <div className="text-gray-400 font-semibold tracking-wide">{label}</div>
-                            <div className="text-gray-200 font-medium">{value}</div>
+                            <div className="text-gray-400 font-semibold tracking-wide text-sm sm:text-base">{label}</div>
+                            <div className="text-gray-200 font-medium text-xs sm:text-base">{value}</div>
                         </div>
                     </div>
                 ))}
