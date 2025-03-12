@@ -10,11 +10,11 @@ function SideBar() {
     const [isvisible, setisvisible] = useState(false);
 
     return (
-        <div className="bg-[#1E1E1E] relative text-white p-4 sm:p-5 flex flex-col justify-center items-center rounded-xl border border-gray-100/10 shadow-md" onClick={() => setisvisible(!isvisible)} >
+        <div className="bg-[#1E1E1E] relative text-white p-4 sm:p-5 flex flex-col justify-center items-center rounded-xl border border-gray-100/10 shadow-md flex-shrink-0" onClick={() => setisvisible(!isvisible)} >
 
             {/* Toggle Button */}
             <button 
-                className={`absolute top-0 right-0 px-4 py-2 bg-[#272727] rounded-tr-xl rounded-bl-xl shadow-md hover:bg-gray-700 transition xl:hidden ${isvisible && "text-[#FCE469] bg-gradient-to-br from-[rgba(252,228,105,0.6)] to-[#272727] "} `}
+                className={`absolute top-0 right-0 px-4 py-2 bg-[#272727] rounded-tr-xl rounded-bl-xl shadow-md hover:bg-gray-700 transition xl:hidden text-[#FCE469] bg-gradient-to-br from-[rgba(252,228,105,0.6)] to-[#272727]  `}
             >
                 {isvisible ? <FaChevronUp className="text-white" /> : <FaChevronDown className="text-white" />}
             </button>
@@ -22,7 +22,7 @@ function SideBar() {
             {/* Profile Section */}
             <div className="w-full flex xl:flex-col items-center gap-4 p-4 rounded-xl shadow-lg relative">
                 {/* Image Container */}
-                <div className="relative bg-gray-200/20 w-20 sm:w-36 xl:w-full aspect-square rounded-2xl flex items-center justify-center shadow-md overflow-hidden">
+                <div className="relative bg-gray-200/20 w-20 sm:w-32 md:w-28 xl:w-52 aspect-square rounded-2xl flex items-center justify-center shadow-md">
                     <Image
                         src={"/my-avatar.png"}
                         layout="fill"
@@ -32,7 +32,7 @@ function SideBar() {
                     />
 
                     {/* Blinking Green Dot */}
-                    <div className="absolute bottom-2 right-2">
+                    <div className="absolute bottom-2 right-1">
                         <div className="w-3 h-3 bg-[#39ff14] rounded-full absolute animate-custom-ping"></div>
                         <div className="w-3 h-3 bg-[#39ff14] rounded-full"></div>
                     </div>
@@ -52,8 +52,8 @@ function SideBar() {
                 </style>
 
                 {/* Name & Role */}
-                <div className="flex flex-col items-center gap-1 ml-5 xl:ml-0">
-                    <div className="text-lg md:text-xl font-semibold text-gray-100">Devansh Jindal</div>
+                <div className="flex flex-col items-start xl:items-center gap-1 ml-5 xl:ml-0">
+                    <div className="text-lg sm:text-3xl md:text-4xl xl:text-2xl font-semibold text-gray-100">Devansh Jindal</div>
                     <div className="text-xs text-gray-200 rounded-xl bg-gray-100/10 px-3 py-1">
                         Full-Stack Developer
                     </div>
@@ -71,7 +71,7 @@ function SideBar() {
                     { icon: CiPhone, label: "PHONE", value: "+91 88473 04008" },
                     { icon: CiLocationOn, label: "LOCATION", value: "Bathinda, Punjab" },
                 ].map(({ icon: Icon, label, value }, idx) => (
-                    <div key={idx} className="flex items-center gap-4 w-full flex-wrap">
+                    <div key={idx} className="flex items-center gap-4 w-full">
                         <div className="bg-[#272727] sm:w-12 sm:h-12 rounded-lg flex items-center justify-center shadow-[-3px_-3px_6px_rgba(255,255,255,0.2)] p-3">
                             <Icon className="text-[#FCE469] text-lg md:text-2xl stroke-[1.5]" />
                         </div>
@@ -88,10 +88,10 @@ function SideBar() {
             {/* Social Media Links */}
             <div className="flex gap-4 mt-10">
                 {[
-                    { icon: FaLinkedin, href: "https://www.linkedin.com/in/devanshjindal", hover: "hover:text-[#0077b5]" },
-                    { icon: FaInstagram, href: "https://www.instagram.com/devanshjindal31", hover: "hover:text-[#E1306C]" },
+                    { icon: FaLinkedin, href: "https://www.linkedin.com/in/devansh-agaarwal/", hover: "hover:text-[#0077b5]" },
+                    { icon: FaInstagram, href: "https://www.instagram.com/devanshaggarwal60/", hover: "hover:text-[#E1306C]" },
                     { icon: FaWhatsapp, href: "https://wa.me/918847304008", hover: "hover:text-[#25D366]" },
-                    { icon: FaGithub, href: "https://github.com/devanshjindal31", hover: "hover:text-white" },
+                    { icon: FaGithub, href: "https://github.com/devansh-jindal-2004", hover: "hover:text-white" },
                 ].map(({ icon: Icon, href, hover }, idx) => (
                     <a
                         key={idx}
