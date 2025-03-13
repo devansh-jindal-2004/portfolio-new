@@ -11,7 +11,7 @@ function Contact() {
       </div>
 
       {/* Location Section */}
-      <div className="mt-4 rounded-2xl overflow-hidden">
+      <div className="mt-4 rounded-2xl overflow-hidden z-10 relative">
         <LocationMap />
       </div>
     </div>
