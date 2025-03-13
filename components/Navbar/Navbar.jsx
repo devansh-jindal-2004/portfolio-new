@@ -10,10 +10,12 @@ function Navbar({ setSelected, selected }) {
           <li key={index}>
             <button
               onClick={() => setSelected(link)}
-              className={`text-gray-300 hover:text-gray-300/50 text-base font-medium transition duration-300 ${selected == link && "text-[#fce469] hover:text-[#fce469] xl:hover:text-[#fce469]"}`}
+              className={`text-base font-medium transition duration-300 ${selected == link ? "text-[#fce469] xl:hover:text-[#fce469]/50" : "text-gray-300 hover:text-gray-300/50"
+                }`}
             >
               {link}
             </button>
+
           </li>
         ))}
       </ul>
