@@ -1,5 +1,5 @@
 "use client"
-import { FaLinkedin, FaInstagram, FaWhatsapp, FaGithub, FaChevronUp, FaChevronDown } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaWhatsapp, FaGithub, FaChevronUp, FaChevronDown, FaGoogle } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import { CiLocationOn, CiMail, CiPhone } from "react-icons/ci";
@@ -90,7 +90,7 @@ function SideBar() {
                 {[
                     { icon: FaGithub, href: "https://github.com/devansh-jindal-2004", hover: "hover:text-white" },
                     { icon: FaLinkedin, href: "https://www.linkedin.com/in/devansh-agaarwal/", hover: "hover:text-[#0077b5]" },
-                    { icon: FaInstagram, href: "https://www.instagram.com/devanshaggarwal60/", hover: "hover:text-[#E1306C]" },
+                    { icon: FaGoogle, href: "https://g.dev/DevanshJindal", hover: "hover:text-[#EA4335]" },
                     { icon: FaWhatsapp, href: "https://wa.me/918847304008", hover: "hover:text-[#25D366]" },
                 ].map(({ icon: Icon, href, hover }, idx) => (
                     <a
