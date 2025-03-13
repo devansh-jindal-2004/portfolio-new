@@ -65,7 +65,7 @@ function SideBar() {
             <div className="border-t border-gray-200/10 w-full my-4"></div>
 
             {/* Contact Information */}
-            <div className="w-full space-y-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-x-6 gap-y-6 px-4 xl:px-0">
+            <div className="w-full space-y-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-x-6 gap-y-6 px-4 xl:px-0 xl:mt-8">
                 {[
                     { icon: CiMail, label: "EMAIL", value: "devanshjindal31@gmail.com" },
                     { icon: CiPhone, label: "PHONE", value: "+91 88473 04008" },
@@ -83,24 +83,24 @@ function SideBar() {
                 ))}
             </div>
 
-            <div className="border-t border-gray-200/10 w-full my-4"></div>
+            {/* <div className="border-t border-gray-200/10 w-full my-4"></div> */}
 
             {/* Social Media Links */}
-            <div className="flex gap-4 justify-center">
+            <div className="flex gap-3 justify-center mt-10">
                 {[
+                    { icon: FaGithub, href: "https://github.com/devansh-jindal-2004", hover: "hover:text-white" },
                     { icon: FaLinkedin, href: "https://www.linkedin.com/in/devansh-agaarwal/", hover: "hover:text-[#0077b5]" },
                     { icon: FaInstagram, href: "https://www.instagram.com/devanshaggarwal60/", hover: "hover:text-[#E1306C]" },
                     { icon: FaWhatsapp, href: "https://wa.me/918847304008", hover: "hover:text-[#25D366]" },
-                    { icon: FaGithub, href: "https://github.com/devansh-jindal-2004", hover: "hover:text-white" },
                 ].map(({ icon: Icon, href, hover }, idx) => (
                     <a
                         key={idx}
                         href={href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`flex items-center justify-center text-gray-400 hover:scale-110 scale-90 ${hover}`}
+                        className={`flex items-center justify-center text-gray-400 hover:scale-90 ${hover}`}
                     >
-                        <Icon className="text-2xl" />
+                        <Icon className="text-xl" />
                     </a>
                 ))}
             </div>
