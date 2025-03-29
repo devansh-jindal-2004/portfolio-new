@@ -8,7 +8,7 @@ function Portfolio() {
         <div className="h-1 w-1/2 bg-[#fce469] rounded-full mt-5 p-1"></div>
       </div>
 
-      <h1>coming Soon</h1>
+      <h1>Projects to be Added Soon</h1>
       
     </div>
   )
