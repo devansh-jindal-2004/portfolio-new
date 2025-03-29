@@ -8,17 +8,17 @@ function SideBar() {
     const [isvisible, setisvisible] = useState(false);
     const [useAvatar, setUseAvatar] = useState(true);
 
-    // Auto Flip Every 5 Seconds
+    // Auto Flip Every 3 Seconds
     useEffect(() => {
         const interval = setInterval(() => {
             setUseAvatar(prev => !prev);
-        }, 3000); // Flip every 5 seconds
+        }, 3000); 
 
-        return () => clearInterval(interval); // Cleanup on unmount
+        return () => clearInterval(interval);
     }, []);
 
     return (
-        <div className="bg-[#1E1E1E] relative text-white p-2 sm:p-5 flex flex-col justify-center items-center rounded-xl border border-gray-100/10 shadow-md flex-shrink-0 h-fit">
+        <div className="bg-[#1E1E1E] relative text-white p-2 sm:p-5 flex flex-col justify-center items-center rounded-xl border border-gray-100/10 shadow-md flex-shrink-0 h-fit" onClick={()=>setisvisible((prev)=> !prev)}>
             
             {/* Toggle Button */}
             <button 
@@ -31,12 +31,12 @@ function SideBar() {
             {/* Profile Section */}
             <div className="w-full flex xl:flex-col items-center gap-4 p-4 rounded-xl shadow-lg relative">
                 
-                {/* Flipping Image Container with Background */}
+                {/* Flipping Image Container */}
                 <div 
                     className={`relative w-20 sm:w-32 md:w-28 xl:w-40 aspect-square rounded-2xl shadow-md transition-transform duration-500 bg-[#272727] flex items-center justify-center overflow-hidden ${useAvatar ? "rotate-y-0" : "rotate-y-180"}`}
                     onClick={() => setUseAvatar(!useAvatar)}
                 >
-                    {/* Image Wrapper to Maintain Shape */}
+                    {/* Image Wrapper */}
                     <div className="absolute inset-0 flex items-center justify-center">
                         {/* Avatar */}
                         <Image
@@ -91,7 +91,8 @@ function SideBar() {
                 </div>
             </div>
 
-            <div className={`w-full ${isvisible ? "block" : "hidden"} xl:block`}>
+            {/* Expandable Menu with Smooth Transition */}
+            <div className={`w-full transition-all duration-500 overflow-hidden ${isvisible ? "block" : "hidden"}`}>
                 <div className="border-t border-gray-200/10 w-full my-4"></div>
 
                 {/* Contact Information */}
