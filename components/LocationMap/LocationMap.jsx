@@ -46,6 +46,7 @@ const LocationMap = () => {
         zoom={12}
         style={{ height: "100%", width: "100%" }}
         ref={mapRef}
+        scrollWheelZoom={false}
       >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution="&copy; OpenStreetMap contributors" />
         <Marker position={location} icon={redPinIcon} ref={markerRef} />

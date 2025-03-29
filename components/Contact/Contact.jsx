@@ -1,5 +1,6 @@
 import React from "react";
 import LocationMap from "../LocationMap/LocationMap";
+import ContactForm from "../ContactForm/ContactForm";
 
 function Contact() {
   return (
@@ -14,6 +15,7 @@ function Contact() {
       <div className="mt-4 rounded-2xl overflow-hidden z-10 relative">
         <LocationMap />
       </div>
+      <ContactForm />
     </div>
   );
 }
