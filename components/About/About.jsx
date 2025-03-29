@@ -1,8 +1,14 @@
-import React from 'react'
+"use client"
+import React, { useEffect } from 'react'
 import ServicesGrid from '../ServiceCards/ServiceCards'
 import SkillsScroll from '../Skills/Skills'
 
 function About() {
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <div className='h-full w-full xl:px-5 py-6 space-y-8'>
       <div className="text-3xl font-bold text-gray-100 relative w-fit px-4 xl:p-0">

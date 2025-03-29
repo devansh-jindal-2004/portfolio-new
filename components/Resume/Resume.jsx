@@ -1,10 +1,16 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import { FaBookOpen, FaBriefcase } from "react-icons/fa";
 import Section from "./Section";
 import ResumeItem from "./ResumeItem";
 import { resumeData } from "./resumeData";
 
 const Resume = () => {
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <div className="xl:px-5 py-6 text-white space-y-8">
       <div className="text-3xl font-bold text-gray-100 relative w-fit px-4 xl:p-0">

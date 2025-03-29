@@ -1,8 +1,14 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import LocationMap from "../LocationMap/LocationMap";
 import ContactForm from "../ContactForm/ContactForm";
 
 function Contact() {
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <div className="h-full w-full px-4 md:px-8 py-6 space-y-6">
       {/* Heading Section */}
