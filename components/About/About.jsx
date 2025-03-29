@@ -1,5 +1,6 @@
 import React from 'react'
 import ServicesGrid from '../ServiceCards/ServiceCards'
+import SkillsScroll from '../Skills/Skills'
 
 function About() {
   return (
@@ -22,9 +23,14 @@ function About() {
         <div className="text-2xl font-bold text-gray-100 relative w-fit px-3 xl:p-0">
           What I'm Doing
         </div>
+        <ServicesGrid />
+      </div>
 
-       <ServicesGrid />
-
+      <div>
+        <div className="text-2xl font-bold text-gray-100 relative w-fit px-3 xl:p-0">
+          Skills
+        </div>
+        <SkillsScroll />
       </div>
 
     </div>

@@ -10,19 +10,19 @@ const services = [
 
 export default function ServicesGrid() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-4xl mx-auto mt-10 px-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mx-auto mt-10 px-4 xl:px-0">
       {services.map((service, index) => (
         <div 
           key={index} 
-          className="bg-[#1E1E1E] border border-gray-800 p-6 rounded-xl shadow-md flex flex-col md:flex-row items-center md:items-start gap-4 hover:shadow-lg transition duration-300"
+          className="bg-[#252525] border border-gray-100/10 p-6 rounded-xl shadow-md flex flex-col mlgd:flex-row items-center md:items-start gap-4 hover:shadow-lg transition duration-300"
         >
           {/* Icon */}
-          <div className="text-[#fce469] flex items-center justify-center text-4xl w-full md:w-auto">
+          <div className="text-[#fce469] flex items-center justify-center text-4xl w-full lg:w-auto">
             {React.createElement(service.icon, { className: "w-12 h-12" })} 
           </div>
 
           {/* Text Content */}
-          <div className="text-center md:text-left">
+          <div className="text-center lg:text-left">
             <h3 className="text-lg font-semibold text-white">{service.title}</h3>
             <p className="text-gray-400 text-sm">{service.description}</p>
           </div>
