@@ -25,7 +25,7 @@ const skills = [
 
 function SkillsScroll() {
   return (
-    <div className="w-full max-w-[55vw] mx-auto px-5 mt-10"> {/* Prevents stretching */}
+    <div className="w-full xl:max-w-[55vw] mx-auto px-5 mt-10"> {/* Prevents stretching */}
       <div className="overflow-x-auto whitespace-nowrap custom-scrollbar">
         <div className="flex gap-12 py-5 w-max pb-10">
           {skills.map((skill, index) => (

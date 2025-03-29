@@ -4,7 +4,7 @@ import SkillsScroll from '../Skills/Skills'
 
 function About() {
   return (
-    <div className='h-full w-full xl:px-5 py-6 space-y-6'>
+    <div className='h-full w-full xl:px-5 py-6 space-y-8'>
       <div className="text-3xl font-bold text-gray-100 relative w-fit px-4 xl:p-0">
         About Me
         <div className="h-1 w-1/2 bg-[#fce469] rounded-full mt-5 px-4 xl:p-1"></div>
