@@ -12,7 +12,7 @@ function SideBar() {
     useEffect(() => {
         const interval = setInterval(() => {
             setUseAvatar(prev => !prev);
-        }, 3000); 
+        }, 5000); 
 
         return () => clearInterval(interval);
     }, []);
@@ -33,17 +33,17 @@ function SideBar() {
                 
                 {/* Flipping Image Container */}
                 <div 
-                    className={`relative w-20 sm:w-32 md:w-28 xl:w-40 aspect-square rounded-2xl shadow-md transition-transform duration-500 bg-[#272727] flex items-center justify-center overflow-hidden ${useAvatar ? "rotate-y-0" : "rotate-y-180"}`}
+                    className={`relative w-20 sm:w-32 md:w-28 xl:w-40 aspect-square rounded-2xl shadow-md transition-transform duration-700 bg-[#272727] flex items-center justify-center overflow-hidden ${useAvatar ? "rotate-y-0" : "rotate-y-180"}`}
                     onClick={() => setUseAvatar(!useAvatar)}
                 >
                     {/* Image Wrapper */}
-                    <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-700">
                         {/* Avatar */}
                         <Image
                             src="/my-avatar.png"
                             layout="fill"
                             objectFit="cover"
-                            className={`rounded-2xl absolute transition-opacity duration-500 ${useAvatar ? "opacity-100" : "opacity-0"}`}
+                            className={`rounded-2xl absolute transition-opacity duration-700 ${useAvatar ? "opacity-100" : "opacity-0"}`}
                             alt="Avatar"
                         />
                         {/* Profile Picture */}
@@ -51,13 +51,22 @@ function SideBar() {
                             src="/profilePic.png"
                             layout="fill"
                             objectFit="cover"
-                            className={`rounded-2xl absolute transition-opacity duration-500 ${useAvatar ? "opacity-0" : "opacity-100"}`}
+                            className={`rounded-2xl absolute transition-opacity duration-700 ${useAvatar ? "opacity-0" : "opacity-100"}`}
                             alt="Profile Pic"
                         />
                     </div>
 
                     {/* Blinking Green Dot */}
-                    <div className="absolute bottom-2 right-2">
+                    <div 
+                        className={`absolute bottom-2 right-2 transition-opacity duration-700 ${useAvatar ? "opacity-100" : "opacity-0"}`}
+                    >
+                        <div className="w-3 h-3 bg-[#39ff14] rounded-full absolute animate-custom-ping"></div>
+                        <div className="w-3 h-3 bg-[#39ff14] rounded-full"></div>
+                    </div>
+                    
+                    <div 
+                        className={`absolute bottom-2 left-2 transition-opacity duration-700 ${useAvatar ? "opacity-0" : "opacity-100"}`}
+                    >
                         <div className="w-3 h-3 bg-[#39ff14] rounded-full absolute animate-custom-ping"></div>
                         <div className="w-3 h-3 bg-[#39ff14] rounded-full"></div>
                     </div>
@@ -92,7 +101,7 @@ function SideBar() {
             </div>
 
             {/* Expandable Menu with Smooth Transition */}
-            <div className={`w-full transition-all duration-500 overflow-hidden ${isvisible ? "block" : "hidden"}`}>
+            <div className={`w-full transition-all duration-500 overflow-hidden ${isvisible ? "block" : "hidden"} xl:block`}>
                 <div className="border-t border-gray-200/10 w-full my-4"></div>
 
                 {/* Contact Information */}
