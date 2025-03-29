@@ -4,7 +4,7 @@ import ContactForm from "../ContactForm/ContactForm";
 
 function Contact() {
   return (
-    <div className="h-full w-full px-8 py-6 space-y-6">
+    <div className="h-full w-full px-4 md:px-8 py-6 space-y-6">
       {/* Heading Section */}
       <div className="text-3xl font-bold text-gray-100 relative w-fit">
         Contact
