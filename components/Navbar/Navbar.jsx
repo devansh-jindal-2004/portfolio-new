@@ -10,7 +10,7 @@ function Navbar({ setSelected, selected }) {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed xl:absolute right-0 bottom-0 xl:top-0 
-        bg-gradient-to-r from-[#fce469] via-[#e6c157] to-[#b89a40] 
+        bg-[radial-gradient(circle_at_center,_#fde47d_10%,_#f8c963_40%,_#e9a640_80%)]  
         xl:bg-gradient-to-bl xl:from-[#161616] xl:via-[#2a2a2a]/90 xl:to-[#1a1a1a] 
         backdrop-blur-md flex xl:px-5 py-2 xl:py-3 rounded-t-2xl xl:rounded-t-none 
         xl:rounded-se-2xl xl:rounded-es-3xl h-fit w-full xl:w-fit 
@@ -28,8 +28,8 @@ function Navbar({ setSelected, selected }) {
                 xl:hover:text-[#fce469]/50
                 ${
                   selected === link
-                    ? "text-white xl:text-[#fce469]" // White text for small screens, yellow for xl
-                    : "text-gray-800 xl:text-gray-300 hover:text-gray-700 xl:hover:text-gray-300/50"
+                    ? "text-white xl:text-[#fce469]" // White for small screens, yellow for xl
+                    : "text-gray-900 xl:text-gray-300 hover:text-gray-800 xl:hover:text-gray-300/50"
                 }`}
             >
               {link}
@@ -38,8 +38,8 @@ function Navbar({ setSelected, selected }) {
                 className={`absolute left-0 bottom-[-2px] w-full transition-transform duration-300 
                   ${
                     selected === link
-                      ? "h-[3px] bg-white scale-x-100 xl:h-[2px] xl:bg-[#fce469]" // Thicker for small screens, normal for xl
-                      : "h-[2px] bg-black scale-x-0 group-hover:scale-x-100 xl:bg-[#fce469]" // Normal effect for xl
+                      ? "h-[3px] bg-white scale-x-100 xl:h-[2px] xl:bg-[#fce469]" // Thicker on mobile
+                      : "h-[2px] bg-[#e9a640] scale-x-0 group-hover:scale-x-100 xl:bg-[#fce469]" // Goldish hover
                   }`}
               ></span>
             </button>
