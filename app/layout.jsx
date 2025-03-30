@@ -5,6 +5,9 @@ import SideBar from "@/components/SideBar/SideBar";
 export const metadata = {
   title: "Devansh's Portfolio",
   description: "Web and Mobile developer",
+  icons: {
+    icon: "./my-avatar.png", // Path to your favicon
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -1,7 +1,6 @@
-import React from "react";
+const SkillsScroll = ()=> {
 
-// Skills Data
-const skills = [
+  const skills = [
     { name: "Next Js", img: "./Skills/next-js.webp" },
     { name: "React Native", img: "./Skills/react-native-1.png" },
     { name: "Android Studio", img: "./Skills/android-studio.svg" },
@@ -23,7 +22,7 @@ const skills = [
     { name: "CSS", img: "./Skills/css.svg" },
 ];
 
-function SkillsScroll() {
+
   return (
     <div className="w-full xl:max-w-[55vw] mx-auto px-5 mt-10">
       <div className="overflow-x-auto whitespace-nowrap custom-scrollbar">
@@ -33,7 +32,14 @@ function SkillsScroll() {
               key={index}
               className="flex flex-col items-center justify-center rounded-[2rem] shadow-lg flex-shrink-0 bg-gray-800 overflow-hidden p-4"
             >
-                <img src={skill.img} alt={skill.name} className="w-32 h-32" />
+                <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 flex items-center justify-center">
+                    <img 
+                      src={skill.img} 
+                      alt={skill.name} 
+                      loading="lazy" // Lazy loading added
+                      className="w-full h-full object-contain" 
+                    />
+                </div>
                 <p className="mt-2 text-gray-300 text-lg font-medium">{skill.name}</p>
             </div>
           ))}
@@ -43,4 +49,5 @@ function SkillsScroll() {
   );
 }
 
-export default SkillsScroll;
+
+export default SkillsScroll

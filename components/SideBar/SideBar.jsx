@@ -22,11 +22,13 @@ function SideBar() {
             
             {/* Toggle Button */}
             <button 
-                className="absolute top-0 right-0 px-4 py-2 bg-[#272727] rounded-tr-xl rounded-bl-xl shadow-md hover:bg-gray-700 transition xl:hidden text-[#FCE469] bg-gradient-to-br from-[rgba(252,228,105,0.6)] to-[#272727]"
-                onClick={() => setisvisible(!isvisible)}
-            >
-                {isvisible ? <FaChevronUp className="text-white" /> : <FaChevronDown className="text-white" />}
-            </button>
+    className="absolute top-0 right-0 px-4 py-2 bg-[#272727] rounded-tr-xl rounded-bl-xl shadow-md hover:bg-gray-700 transition xl:hidden text-[#FCE469] bg-gradient-to-br from-[rgba(252,228,105,0.6)] to-[#272727]"
+    onClick={() => setisvisible(!isvisible)}
+    aria-label={isvisible ? "Collapse sidebar" : "Expand sidebar"} // Accessible name
+>
+    {isvisible ? <FaChevronUp className="text-white" /> : <FaChevronDown className="text-white" />}
+</button>
+
 
             {/* Profile Section */}
             <div className="w-full flex xl:flex-col items-center gap-4 p-4 rounded-xl shadow-lg relative">
