@@ -13,27 +13,28 @@ const skills = [
     { name: "GitHub", img: "./Skills/github.png" },
     { name: "Postman", img: "./Skills/postman.png" },
     { name: "Git", img: "./Skills/git.png" },
-    { name: "Java Script", img: "./Skills/js.webp" },
+    { name: "JavaScript", img: "./Skills/js.webp" },
     { name: "NPM", img: "./Skills/Npm-logo.png" },
-    { name: "My SQL", img: "./Skills/SQL.png" },
+    { name: "MySQL", img: "./Skills/SQL.png" },
     { name: "Tailwind", img: "./Skills/tailwind.png" },
     { name: "C++", img: "./Skills/cpp.svg" },
     { name: "C Language", img: "./Skills/c.png" },
     { name: "HTML", img: "./Skills/html.png" },
-    { name: "Css", img: "./Skills/css.svg" },
+    { name: "CSS", img: "./Skills/css.svg" },
 ];
 
 function SkillsScroll() {
   return (
-    <div className="w-full xl:max-w-[55vw] mx-auto px-5 mt-10"> {/* Prevents stretching */}
+    <div className="w-full xl:max-w-[55vw] mx-auto px-5 mt-10">
       <div className="overflow-x-auto whitespace-nowrap custom-scrollbar">
         <div className="flex gap-12 py-5 w-max pb-10">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="flex items-center justify-center rounded-[2rem] shadow-lg flex-shrink-0 bg-gray-800 overflow-hidden" // Common Background
+              className="flex flex-col items-center justify-center rounded-[2rem] shadow-lg flex-shrink-0 bg-gray-800 overflow-hidden p-4"
             >
-                <img src={skill.img} alt={skill.name} className="w-40 h-40" />
+                <img src={skill.img} alt={skill.name} className="w-32 h-32" />
+                <p className="mt-2 text-gray-300 text-lg font-medium">{skill.name}</p>
             </div>
           ))}
         </div>
