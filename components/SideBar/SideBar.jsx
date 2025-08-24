@@ -12,29 +12,29 @@ function SideBar() {
     useEffect(() => {
         const interval = setInterval(() => {
             setUseAvatar(prev => !prev);
-        }, 5000); 
+        }, 5000);
 
         return () => clearInterval(interval);
     }, []);
 
     return (
-        <div className="bg-[#1E1E1E] relative text-white p-2 sm:p-5 flex flex-col justify-center items-center rounded-xl border border-gray-100/10 shadow-md flex-shrink-0 h-fit" onClick={()=>setisvisible((prev)=> !prev)}>
-            
+        <div className="bg-[#1E1E1E] relative text-white p-2 sm:p-5 flex flex-col justify-center items-center rounded-xl border border-gray-100/10 shadow-md flex-shrink-0 h-fit" onClick={() => setisvisible((prev) => !prev)}>
+
             {/* Toggle Button */}
-            <button 
-    className="absolute top-0 right-0 px-4 py-2 bg-[#272727] rounded-tr-xl rounded-bl-xl shadow-md hover:bg-gray-700 transition xl:hidden text-[#FCE469] bg-gradient-to-br from-[rgba(252,228,105,0.6)] to-[#272727]"
-    onClick={() => setisvisible(!isvisible)}
-    aria-label={isvisible ? "Collapse sidebar" : "Expand sidebar"} // Accessible name
->
-    {isvisible ? <FaChevronUp className="text-white" /> : <FaChevronDown className="text-white" />}
-</button>
+            <button
+                className="absolute top-0 right-0 px-4 py-2 bg-[#272727] rounded-tr-xl rounded-bl-xl shadow-md hover:bg-gray-700 transition xl:hidden text-[#FCE469] bg-gradient-to-br from-[rgba(252,228,105,0.6)] to-[#272727]"
+                onClick={() => setisvisible(!isvisible)}
+                aria-label={isvisible ? "Collapse sidebar" : "Expand sidebar"} // Accessible name
+            >
+                {isvisible ? <FaChevronUp className="text-white" /> : <FaChevronDown className="text-white" />}
+            </button>
 
 
             {/* Profile Section */}
             <div className="w-full flex xl:flex-col items-center gap-4 p-4 rounded-xl shadow-lg relative">
-                
+
                 {/* Flipping Image Container */}
-                <div 
+                <div
                     className={`relative w-20 sm:w-32 md:w-28 xl:w-40 aspect-square rounded-2xl shadow-md transition-transform duration-700 bg-[#272727] flex items-center justify-center overflow-hidden ${useAvatar ? "rotate-y-0" : "rotate-y-180"}`}
                     onClick={() => setUseAvatar(!useAvatar)}
                 >
@@ -49,24 +49,24 @@ function SideBar() {
                             alt="Avatar"
                         />
                         {/* Profile Picture */}
-                        <Image
-                            src="/profilePic.png"
+                         <Image
+                            src="/my-avatar.png"
                             layout="fill"
                             objectFit="cover"
-                            className={`rounded-2xl absolute transition-opacity duration-700 ${useAvatar ? "opacity-0" : "opacity-100"}`}
-                            alt="Profile Pic"
+                            className={`rounded-2xl absolute transition-opacity duration-700 ${useAvatar ? "opacity-100" : "opacity-0"}`}
+                            alt="Avatar"
                         />
                     </div>
 
                     {/* Blinking Green Dot */}
-                    <div 
+                    <div
                         className={`absolute bottom-2 right-2 transition-opacity duration-700 ${useAvatar ? "opacity-100" : "opacity-0"}`}
                     >
                         <div className="w-3 h-3 bg-[#39ff14] rounded-full absolute animate-custom-ping"></div>
                         <div className="w-3 h-3 bg-[#39ff14] rounded-full"></div>
                     </div>
-                    
-                    <div 
+
+                    <div
                         className={`absolute bottom-2 left-2 transition-opacity duration-700 ${useAvatar ? "opacity-0" : "opacity-100"}`}
                     >
                         <div className="w-3 h-3 bg-[#39ff14] rounded-full absolute animate-custom-ping"></div>
