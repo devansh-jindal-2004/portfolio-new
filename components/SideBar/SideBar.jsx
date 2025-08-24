@@ -53,7 +53,7 @@ function SideBar() {
                             src="/my-avatar.png"
                             layout="fill"
                             objectFit="cover"
-                            className={`rounded-2xl absolute transition-opacity duration-700 ${useAvatar ? "opacity-100" : "opacity-0"}`}
+                            className={`rounded-2xl absolute transition-opacity duration-700 ${!useAvatar ? "opacity-100" : "opacity-0"}`}
                             alt="Avatar"
                         />
                     </div>
