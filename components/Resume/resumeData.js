@@ -3,7 +3,7 @@ export const resumeData = {
       {
         title: "Baba Farid College, Bathinda",
         degree: "Bachelor of Computer Application (BCA)",
-        years: "2023 — Present",
+        years: "2023 — 2026",
       },
       {
         title: "JNJ DAV SEN SEC Public School, Gidderbaha",
