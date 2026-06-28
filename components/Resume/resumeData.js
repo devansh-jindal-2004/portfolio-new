@@ -16,7 +16,7 @@ export const resumeData = {
         title: "Software Engineer Intern",
         company: "MathTech Thinking Foundation",
         location: "Remote",
-        years: "Sep, 2024 — Present • 8 mos",
+        years: "Sep, 2024 — Feb, 2025 • 6 mos",
         tasks: [
           "Led the development of a new, user-friendly website for the organization, improving accessibility and engagement.",
           "Enhanced the UI/UX to create a seamless and visually appealing experience for users.",
