@@ -25,7 +25,7 @@ export const resumeData = {
       },
       {
         title: "Student Intern",
-        company: "Baba Farid College of Enginering and Technology",
+        company: "Baba Farid College of Engineering and Technology",
         location: "On Site",
         years: "August, 2025 — Nov, 2025 • 4 mon",
         tasks: [
